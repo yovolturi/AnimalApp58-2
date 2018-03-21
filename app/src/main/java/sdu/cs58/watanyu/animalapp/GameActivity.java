@@ -22,6 +22,7 @@ public class GameActivity extends AppCompatActivity {
     ImageButton volumnImageButton;
     MediaPlayer mediaPlayer;
     int questionCount = 10;///เก็บข้อคำถาม
+    String getNameString;
 
     ArrayList<Integer> qID = new ArrayList<Integer>();
     String answer;
@@ -237,7 +238,8 @@ public class GameActivity extends AppCompatActivity {
 
             }
             if (qID.isEmpty()) {///ถ้าทำครบทุกข้อ นั่นคือ qidเป้นค่าว่างให้เเสดงคะเเนน
-                dialogboxScore();/// เmethod เสดงคะเเนนรวม
+                getNameString = getIntent().getStringExtra("Name");
+                dialogboxScore(getNameString);/// เmethod เสดงคะเเนนรวม
 
             } else {////ถ้ายังทำไม่ครบ
                 setQuestion(qID.remove(0));///เรียก setQusrtion เเสดงงคำถามถักไป
@@ -246,10 +248,10 @@ public class GameActivity extends AppCompatActivity {
 
         }///end choiceAns
 
-         private void dialogboxScore() {///method สำหรับเเสดงคะเเเนนน
+         private void dialogboxScore(String name) {///method สำหรับเเสดงคะเเเนนน
              AlertDialog.Builder builder = new AlertDialog.Builder(this);
              builder.setTitle("สรุปคะเเนน");
-             builder.setMessage("ได้คะะเนน" + score + "คะเเนน")
+             builder.setMessage(name+"ได้คะะเนน" + score + "คะเเนน")
                 .setCancelable(false)
                 .setPositiveButton("ออกจากเกม", new DialogInterface.OnClickListener() {
                     @Override

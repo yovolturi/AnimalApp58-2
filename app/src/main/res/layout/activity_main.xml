@@ -33,7 +33,7 @@
         app:srcCompat="@drawable/icon" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -51,13 +51,13 @@
         android:layout_marginTop="32dp"
         android:text="name"
         android:textSize="@dimen/h2"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
+        app:layout_constraintEnd_toStartOf="@+id/edtName"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnStart"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,6 +69,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/edtName"
         app:layout_constraintVertical_bias="0.19" />
 </android.support.constraint.ConstraintLayout>
